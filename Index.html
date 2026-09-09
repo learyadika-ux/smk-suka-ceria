@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>SMK Suka Ceria - Sekolah Unggul & Berkarakter</title>
+    <meta name="description" content="Official Website SMK Suka Ceria Jakarta Barat. Informasi Pendaftaran Murid Baru (SPMB), Profil Sekolah, Kegiatan Ekstrakurikuler, dan Kontak.">
+    <meta name="keywords" content="SMK Suka Ceria, SPMB SMK Suka Ceria, Sekolah Jakarta Barat, SMK Jakarta Barat">
+    <meta name="author" content="SMK Suka Ceria">
+    
+    <!-- Open Graph untuk Media Sosial -->
+    <meta property="og:title" content="SMK Suka Ceria - Unggul & Berkarakter">
+    <meta property="og:description" content="Informasi pendaftaran dan profil resmi SMK Suka Ceria.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Link & Google Font -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="school-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">SMK Suka Ceria</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#kegiatan">Kegiatan</a></li>
+                    <li><a href="#spmb">Info SPMB</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3xDeaiWz5QhnPZUZipZkktpr2ckOIrKqRJpq5_NZJsg&s=10'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Selamat Datang di SMK Suka Ceria</h1>
+            <p>Membentuk Generasi Unggul, Berprestasi, dan Berakhlak Mulia</p>
+            <a href="#spmb" class="btn-primary">Daftar SPMB Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profil" class="section">
+        <div class="container">
+            <h2>Profil Sekolah</h2>
+            <p class="section-desc">Mengenal lebih dekat visi, misi, serta fasilitas unggulan kami.</p>
+            <div class="profil-grid">
+                <div class="profil-card">
+                    <h3>Visi</h3>
+                    <p>Menjadi lembaga pendidikan unggulan yang menghasilkan lulusan cerdas, kompetitif, dan berkarakter Pancasila.</p>
+                </div>
+                <div class="profil-card">
+                    <h3>Misi</h3>
+                    <p>1. Menyelenggarakan pembelajaran aktif dan inovatif.<br>2. Mengembangkan potensi siswa di bidang akademik dan non-akademik.<br>3. Menanamkan nilai luhur keagamaan.</p>
+                </div>
+                <div class="profil-card">
+                    <h3>Fasilitas</h3>
+                    <p>Laboratorium Komputer & Sains modern, Perpustakaan Digital, Lapangan Olahraga Multifungsi, serta Ruang Kelas AC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kegiatan Sekolah -->
+    <section id="kegiatan" class="section bg-light">
+        <div class="container">
+            <h2>Kegiatan Sekolah</h2>
+            <p class="section-desc">Klik pada kartu kegiatan untuk melihat rincian detailnya.</p>
+            <div class="kegiatan-grid">
+                
+                <div class="kegiatan-card" onclick="openModal('modalEskul')">
+                    <div class="kegiatan-img bg-img-pramuka"></div>
+                    <div class="kegiatan-body">
+                        <h3>Ekstrakurikuler Pilihan</h3>
+                        <p>Pramuka, Paskibra, PMR, Seni Musik, Tari, Olahraga, dan IT Club.</p>
+                    </div>
+                </div>
+
+                <div class="kegiatan-card" onclick="openModal('modalOlimpiade')">
+                    <div class="kegiatan-img bg-img-olimpiade"></div>
+                    <div class="kegiatan-body">
+                        <h3>Klub Olimpiade</h3>
+                        <p>Pembinaan khusus Matematika, Fisika, Kimia, dan Komputer.</p>
+                    </div>
+                </div>
+
+                <div class="kegiatan-card" onclick="openModal('modalPensi')">
+                    <div class="kegiatan-img bg-img-pensi"></div>
+                    <div class="kegiatan-body">
+                        <h3>Pentas Seni (Pensi)</h3>
+                        <p>Wadah tahunan siswa untuk penampilan seni musik, drama, dan pameran.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Pop-up Kegiatan 1: Eskul -->
+    <div id="modalEskul" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalEskul')">&times;</span>
+            <h2>Daftar Ekstrakurikuler</h2>
+            <p class="modal-subtitle">Pilihan kegiatan ekstrakurikuler untuk mengembangkan bakat dan minat siswa.</p>
+            
+            <div class="popup-grid">
+                <div class="popup-card">
+                    <img src="https://static.republika.co.id/uploads/images/inpicture_slide/sejumlah-anggota-pramuka-melaksanakan-upacara-perayaan-hari-pramuka-ke-54-_150816144730-799.jpg" alt="Pramuka" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Pramuka (Wajib)</h3>
+                        <p>Membentuk karakter kepemimpinan, kemandirian, dan kedisiplinan siswa.</p>
+                    </div>
+                </div>
+                
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReagUgjbGaJM2paiv5_mAiBDrKq8j_S7txVfro9vA9g&s=10" alt="Paskibra" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Paskibra</h3>
+                        <p>Melatih kedisiplinan, PBB, serta persiapan petugas upacara dan lomba.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD-m7i4MwE_ufU-VWrqTjbQWVsDQpuhEZYez_3vRugKg&s=10" alt="PMR" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>PMR (Palang Merah Remaja)</h3>
+                        <p>Pendidikan pertolongan pertama, kesehatan, dan kegiatan kepedulian sosial.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2uWTIB-pLbqHVrm6NMsyqRNyViTGml9smp-YNxI42A&s=10" alt="Olahraga & Futsal" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Klub Olahraga (Futsal & Basket)</h3>
+                        <p>Pengembangan fisik, kerja sama tim, dan pembinaan atlet antarsekolah.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTjtFrzG_B5TNNLJAisPUCRkAVain9uQECbI3xQRnQXg&s=10" alt="IT Club" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>IT & Coding Club</h3>
+                        <p>Belajar dasar pemrograman web, desain grafis, jaringan, dan teknologi digital.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://pgsd.stkipdarussalamcilacap.ac.id/assets/uploads/news-13.jpg" alt="Seni Tari & Musik" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Seni Tari & Musik</h3>
+                        <p>Wadah kreativitas seni tradisional maupun modern bagi para siswa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up Kegiatan 2: Olimpiade -->
+    <div id="modalOlimpiade" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalOlimpiade')">&times;</span>
+            <h2>Klub Olimpiade & Sains</h2>
+            <p class="modal-subtitle">Pembinaan intensif persiapan Kompetisi Sains Nasional (KSN).</p>
+            
+            <div class="popup-grid">
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQUWSExc3VM2YqwHr3tIAj2RSm8Lg1rLvgr0pqXfmdA&s=10" alt="Matematika" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Olimpiade Matematika</h3>
+                        <p>Pendalaman logika, pemecahan masalah kompleks, dan persiapan OSN.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPfy7UCkZJxb1l3bzsTshY2ioFeHScDajffRXhlWlh6Q&s=10" alt="Informatika" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Olimpiade Informatika / Komputer</h3>
+                        <p>Pelatihan algoritma, struktur data, dan kompetisi pemrograman competitive coding.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjLCXLMw6PwogkcVSShbrgHMgpSfpIUYn9DCRjAVvjnw&s=10" alt="Sains Terapan" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Klub Sains & Riset</h3>
+                        <p>Penelitian terapan, eksperimen laboratorium, dan pembuatan karya ilmiah remaja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up Kegiatan 3: Pensi -->
+    <div id="modalPensi" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modalPensi')">&times;</span>
+            <h2>Pentas Seni (Pensi) Tahunan</h2>
+            <p class="modal-subtitle">Ajang ekspresi dan pertunjukan karya siswa-siswi SMK Suka Ceria.</p>
+            
+            <div class="popup-grid">
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Pz4R5iLZk6Zue-gXgCWFmq6TRxhT4kRgxdGqbHNBdQ&s=10" alt="Musik" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Pertunjukan Musik & Band</h3>
+                        <p>Penampilan live music dari band sekolah dan guest star alumni.</p>
+                    </div>
+                </div>
+
+                <div class="popup-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG-lZ8C8S55ZRylDDA3mEf3UhHFp-WA6erzuiab6MX-g&s=10" alt="Pameran Karya" class="popup-card-img">
+                    <div class="popup-card-body">
+                        <h3>Pameran Karya Seni & IT</h3>
+                        <p>Unjuk karya lukisan, produk kreatif, dan demonstrasi aplikasi hasil karya siswa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info SPMB -->
+    <section id="spmb" class="section">
+        <div class="container">
+            <h2>Info SPMB (Seleksi Penerimaan Murid Baru)</h2>
+            <p class="section-desc">Tahun Ajaran 2026/2027 Telah Dibuka!</p>
+            <div class="spmb-box">
+                <div class="spmb-info">
+                    <h3>Jalur Pendaftaran</h3>
+                    <ul>
+                        <li><strong>Jalur Prestasi:</strong> Bebas tes tertulis bagi peraih juara.</li>
+                        <li><strong>Jalur Reguler:</strong> Seleksi berbasis CBT.</li>
+                        <li><strong>Jalur Afirmasi:</strong> Kuota khusus keluarga prasejahtera.</li>
+                    </ul>
+                </div>
+                <div class="spmb-cta">
+                    <h3>Gelombang 1</h3>
+                    <p class="date">1 Maret - 30 April 2026</p>
+                    <a href="https://wa.me/6285781890636?text=Halo%20panitia%20SPMB,%20saya%20ingin%20bertanya%20mengenai%20pendaftaran%20SMK%20Suka%20Ceria." target="_blank" class="btn-primary">Hubungi WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section bg-light">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <p class="section-desc">Punya pertanyaan seputar pendaftaran atau sekolah? Hubungi kami.</p>
+            <div class="kontak-wrapper">
+                <div class="kontak-info">
+                    <h3>Informasi Sekolah</h3>
+                    <p><strong>Alamat:</strong> Jl. Tegal Alur No. 45, Kota Jakarta Barat</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/6285781890636" target="_blank" class="contact-link">0857-8189-0636</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:learyadika@gmail.com" class="contact-link">learyadika@gmail.com</a></p>
+                    <p><strong>Jam Operasional:</strong> Senin - Jumat (07:00 - 15:00)</p>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9723381678205!2d106.7214781!3d-6.1344199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a9d7000000001%3A0x123456789abcdef!2sTegal%20Alur%2C%20Kalideres%2C%20West%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1700000000000" width="100%" height="250" style="border:0; border-radius: 8px; margin-top: 15px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <form class="kontak-form" id="formKontak">
+                    <h3>Kirim Pesan</h3>
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                    <input type="tel" id="telepon" placeholder="Nomor Telepon / WhatsApp" required>
+                    <textarea id="pesan" rows="4" placeholder="Tulis pesan atau pertanyaan..." required></textarea>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SMK Suka Ceria. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    document.getElementById('formKontak').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nama = document.getElementById('nama').value;
+        const telepon = document.getElementById('telepon').value;
+        const pesan = document.getElementById('pesan').value;
+        const nomorWA = '6285781890636';
+        const teksWA = `Halo Admin SMK Suka Ceria,%0A%0ASaya ingin mengirim pesan:%0A- *Nama:* ${encodeURIComponent(nama)}%0A- *No. Telp:* ${encodeURIComponent(telepon)}%0A- *Pesan:* ${encodeURIComponent(pesan)}`;
+        window.open(`https://wa.me/${nomorWA}?text=${teksWA}`, '_blank');
+    });
+    </script>
+
+</body>
+</html>
